@@ -1,3 +1,4 @@
+# 数据预处理及基础分析
 import scanpy as sc
 import snapatac2 as snap
 import muon as mu
@@ -135,5 +136,6 @@ print("正在保存结果...")
 # 绘图时也使用新的列名
 sc.pl.umap(adata, color=['leiden', 'n_fragments', tss_col], save="_atac_final.pdf")
 adata.write("seekgene_atac_processed_final.h5ad")
+
 
 print("任务全部成功完成！")
